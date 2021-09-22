@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_calendra.css">
+    <title>Plan Your Day</title>
+</head>
+
+<body onload="">
+
+
+
+    <div class="navbar" style="text-align: center;text-decoration: none;">
+        <a href="home.html">Home</a>
+        <a href="plan_day.html">Plan Your Day</a>
+        <a href="all_task.html">All Task</a>
+        <a href="event-calendar-evo/index.html">Calendar</a>
+    </div>
+
+
+    <div class="addTask">
+        <h2 style="text-align: center;"> Set Your Task</h2>
+        <div id="input-field">
+            <div class="group">
+                <label for="">Enter Task</label><br>
+                <input type="text" id="task">
+            </div>
+            <div class="group">
+                <label for="">Choose Status</label><br>
+                <select name="stat" id="status">
+                    <option value="start">Start</option>
+                    <option value="in-progress">In-Progress</option>
+                    <option value="completed">Completed</option>
+
+                </select>
+            </div>
+            <div class="group">
+                <label for="">Choose Priority</label><br>
+                <select name="prior" id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+
+                </select>
+            </div>
+            <div class="group">
+                <label for="">Enter Date</label><br>
+                <input type="date" id="date">
+            </div>
+            <div class="group">
+                <div id="button">
+                    <button id="save" onclick="saveTaskk()">Save</button>
+                </div>
+                <button id="show" onclick="showDataToday()">Show</button>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <table id="tbl">
+            <thead>
+                <th>S.no</th>
+                <th><a href="#" onclick=sort()>Task</a></th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Date</th>
+                <th>Action</th>
+            </thead>
+            <tbody id="res">
+            </tbody>
+        </table>
+    </div>
+    <script src="/task.js"></script>
+</body>
+
+</html>
